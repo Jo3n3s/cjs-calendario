@@ -10,6 +10,27 @@ for(let d = 1; d <= 31; d++){
     dia.innerHTML += `<option class="text-black">${d}</option>`;
 }
 
+function carregaDias(){
+    dia.length = 0;
+    if(mes.value == "Jan" | mes.value == "Mar" | mes.value == "Mai" | mes.value == "Jul" | mes.value == "Ago" | mes.value == "Out" | mes.value == "Dez"){
+        // Preencher os dias de acordo com o mes selecionado
+        for(let d = 1; d <= 31; d++){
+            dia.innerHTML += `<option class="text-black">${d}</option>`;
+        }
+    } else if(mes.value == "Fev"){
+        // Preencher os dias de acordo com o mes selecionado
+        for(let d = 1; d <= 29; d++){
+            dia.innerHTML += `<option class="text-black">${d}</option>`;
+        }
+    }else{
+        // Preencher os dias de acordo com o mes selecionado
+        for(let d = 1; d <= 30; d++){
+            dia.innerHTML += `<option class="text-black">${d}</option>`;
+        }
+    }
+
+}
+
 function descobrirNome(){
     let nome = "";
     if(mes.value == "Jan"){
